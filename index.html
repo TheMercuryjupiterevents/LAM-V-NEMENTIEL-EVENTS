@@ -731,7 +731,7 @@ input,select,textarea{font-size:.84rem}
 <div id="welcome-intro" role="status" aria-label="Bienvenue chez LAM ÉVÉNEMENTIEL & EVENTS Événementiel">
   <div class="intro-writing">
     <div class="welcome-word">Bienvenue</div>
-    <div class="welcome-brand">Chez <strong>LAM ÉVÉNEMENTIEL & EVENTS</strong></div>
+    <div class="welcome-brand"><span class="welcome-chez">Chez</span> <strong>LAM ÉVÉNEMENTIEL <span class="welcome-white">&amp; EVENTS</span></strong></div>
     <div class="intro-signature" aria-label="Ligne décorative dorée" role="img">
       <svg class="signature-swoosh" viewBox="0 0 360 34" aria-hidden="true">
         <path class="signature-flourish" d="M8 22 C64 3,100 29,155 16 S263 8,352 7" />
@@ -2596,4 +2596,14 @@ body .section:not(.hero) h2::after{background:linear-gradient(90deg,#d8b43a,#f7f
   -webkit-text-fill-color:#171717!important;
   text-shadow:1px 1px 0 #fff, -1px -1px 0 #fff!important;
 }
+
+/* Accueil animé : le message exact reste lisible sur mobile et ordinateur */
+#welcome-intro .intro-writing{width:100%;display:flex;flex-direction:column;align-items:center;gap:clamp(18px,3vh,30px)}
+#welcome-intro .welcome-word{display:block!important;width:100%;text-align:center;color:#fe0000!important;-webkit-text-fill-color:#fe0000!important;clip-path:inset(0 100% 0 0)!important;animation:lamWelcomeWriteFinal 1.6s steps(20,end) .25s forwards!important;font-size:clamp(2.1rem,8.5vw,5.4rem)!important;letter-spacing:.06em!important}
+#welcome-intro .welcome-brand{display:block!important;width:100%;max-width:920px;text-align:center;color:#171717!important;-webkit-text-fill-color:#171717!important;opacity:0!important;transform:translateY(12px)!important;animation:lamWelcomeBrandFinal .9s ease 1.75s forwards!important;font-size:clamp(.95rem,3.5vw,1.75rem)!important;line-height:1.8!important;letter-spacing:.08em!important;overflow-wrap:anywhere}
+#welcome-intro .welcome-brand .welcome-chez{display:block!important;color:#171717!important;-webkit-text-fill-color:#171717!important;font-size:.82em!important;letter-spacing:.18em!important;margin-bottom:4px}
+#welcome-intro .welcome-brand strong{display:block!important;font-weight:700!important;color:#171717!important;-webkit-text-fill-color:#171717!important}
+#welcome-intro .welcome-brand .welcome-white{color:#fff!important;-webkit-text-fill-color:#fff!important;-webkit-text-stroke:.7px #171717;text-shadow:0 0 1px #171717}
+@media(max-width:520px){#welcome-intro .welcome-word{font-size:clamp(1.8rem,9vw,2.7rem)!important}#welcome-intro .welcome-brand{font-size:clamp(.9rem,4vw,1.2rem)!important;max-width:330px}}
+@media(prefers-reduced-motion:reduce){#welcome-intro .welcome-word{clip-path:none!important;animation:none!important}#welcome-intro .welcome-brand{opacity:1!important;transform:none!important;animation:none!important}}
 </style>
