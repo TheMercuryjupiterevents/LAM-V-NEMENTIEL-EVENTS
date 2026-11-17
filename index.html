@@ -725,6 +725,38 @@ input,select,textarea{font-size:.84rem}
 @keyframes lamWelcomeExitFinal{to{opacity:0;visibility:hidden;pointer-events:none}}
 @media(prefers-reduced-motion:reduce){#welcome-intro{animation:lamWelcomeExitFinal .5s ease 4.5s forwards!important}#welcome-intro .welcome-word{animation:lamWelcomeWriteFinal .01ms steps(1,end) .01ms forwards!important}#welcome-intro .welcome-brand{animation:lamWelcomeBrandFinal .01ms ease .01ms forwards!important}#welcome-intro .signature-flourish{animation:lamWelcomeLineFinal .01ms ease .01ms forwards!important}#welcome-intro:before,#welcome-intro:after{animation:none!important}}
 </style>
+
+<style id="lam-home-hero-position-final">
+.hero{min-height:calc(100vh - 72px)!important;background:linear-gradient(145deg,#fff 0%,#fffafa 55%,#faeeee 100%)!important}
+.hero:before,.hero:after{display:none!important;content:none!important}
+.hero-grid.lam-hero-centered{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;text-align:center!important;padding:18px 0 86px!important}
+.lam-wheat-emblem{width:min(100%,280px)!important;aspect-ratio:1!important;margin:0 auto!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:visible!important}
+.lam-wheat-emblem>.hero-logo{display:block!important;width:min(100%,230px)!important;max-width:230px!important;height:auto!important;aspect-ratio:1!important;flex:0 0 auto!important;object-fit:contain!important;margin:0 auto!important;border:0!important;outline:0!important;outline-offset:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;animation:none!important}
+.lam-hero-brand{width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;margin:0 auto}
+.lam-hero-brand h1{margin:0 0 2px!important;font:500 clamp(3.8rem,15vw,5.2rem)/.98 Georgia,"Times New Roman",serif!important;letter-spacing:.01em!important}
+.lam-letter-l,.lam-letter-m{color:#d71920!important}.lam-letter-a{color:#ffd400!important}
+.lam-hero-event{color:#1746a2!important;font:500 clamp(2rem,8vw,3.2rem)/1.05 Georgia,"Times New Roman",serif!important}
+.lam-hero-events{color:#f28c00!important;font:500 clamp(1.9rem,7.4vw,3rem)/1.05 Georgia,"Times New Roman",serif!important}
+.lam-hero-celestial{display:flex;align-items:center;justify-content:center;gap:22px;margin:18px 0 8px;color:#8a6b25;font-size:2.1rem;line-height:1}
+.lam-hero-celestial .lam-sun{color:#f6bf00}
+.lam-hero-slogan{max-width:720px;margin:10px auto 20px!important;color:#e50920!important;font:700 clamp(1.05rem,4.2vw,1.55rem)/1.5 Arial,Helvetica,sans-serif!important;letter-spacing:.12em!important;text-align:center!important}
+.lam-hero-brand .lead{max-width:680px;margin:0 auto 10px;text-align:center}
+.lam-hero-brand .actions{justify-content:center;margin-top:12px}
+@media(max-width:680px){
+ .hero{min-height:auto!important}
+ .hero-grid.lam-hero-centered{padding:8px 0 95px!important;gap:2px!important}
+ .lam-wheat-emblem{width:min(100%,245px)!important}
+ .lam-wheat-emblem>.hero-logo{width:min(100%,215px)!important;max-width:215px!important}
+ .lam-hero-brand h1{font-size:clamp(3.5rem,17vw,4.7rem)!important}
+ .lam-hero-event{font-size:clamp(1.8rem,8.2vw,2.65rem)!important}
+ .lam-hero-events{font-size:clamp(1.75rem,7.8vw,2.5rem)!important}
+ .lam-hero-celestial{margin:14px 0 6px;font-size:1.85rem;gap:18px}
+ .lam-hero-slogan{font-size:clamp(.98rem,4.1vw,1.2rem)!important;letter-spacing:.1em!important;line-height:1.55!important;margin:8px auto 18px!important}
+ .lam-hero-brand .lead{font-size:.82rem!important}
+ .lam-hero-brand .actions .btn{width:auto}
+}
+</style>
+
 </head>
 <body>
 
@@ -758,19 +790,19 @@ input,select,textarea{font-size:.84rem}
 <main id="accueil">
 <section class="hero">
 
-<div class="hero-three-stars" aria-label="Étoiles décoratives" role="img"><span class="spiritual-eye" aria-hidden="true">🧿</span><span class="star-yellow">★</span><span class="star-orange">★</span><span class="star-gray">★</span><span class="spiritual-eye" aria-hidden="true">🧿</span><span class="star-green">★</span><span class="star-gold">★</span><span class="spiritual-eye" aria-hidden="true">🧿</span></div>
-<div class="wrap hero-grid">
-<div class="lam-wheat-emblem" aria-label="Logo LAM au centre, intégré à des ailes métalliques 3D animées">
-<img class="lam-wheat-wing lam-wheat-wing-left" src="https://themercuryjupiterevents.github.io/LAM--V-NEMENTIEL-EVENTS-/assets/lam-wheat-wings.svg?v=20261018metal3d" alt="" aria-hidden="true"><img class="lam-wheat-wing lam-wheat-wing-right" src="https://themercuryjupiterevents.github.io/LAM--V-NEMENTIEL-EVENTS-/assets/lam-wheat-wings.svg?v=20261018metal3d" alt="" aria-hidden="true">
-<img class="hero-logo" src="https://themercuryjupiterevents.github.io/LAM--V-NEMENTIEL-EVENTS-/assets/IMG_7123.png?v=20261018clear" alt="Logo principal LAM ÉVÉNEMENTIEL & EVENTS">
+<div class="wrap hero-grid lam-hero-centered">
+<div class="lam-wheat-emblem" aria-label="Logo LAM">
+<img class="hero-logo" src="https://themercuryjupiterevents.github.io/LAM--V-NEMENTIEL-EVENTS-/assets/IMG_7123.png?v=20261117centered" alt="Logo LAM dans un cercle et un triangle dorés">
 </div>
-<div>
-<h1>LAM ÉVÉNEMENTIEL & EVENTS</h1><div class="hero-event-label">ÉVÉNEMENTIEL</div>
-<p class="tagline">L’art de recevoir, le soin du détail et la signature de vos plus beaux moments.</p>
+<div class="lam-hero-brand">
+<h1><span class="lam-letter-l">L</span><span class="lam-letter-a">A</span><span class="lam-letter-m">M</span></h1>
+<div class="lam-hero-event">ÉVÉNEMENTIEL</div>
+<div class="lam-hero-events">&amp; EVENTS</div>
+<div class="lam-hero-celestial" aria-label="Lune, soleil et étoile"><span>☾</span><span class="lam-sun">☀</span><span>☆</span></div>
+<p class="lam-hero-slogan">L’ART DE CRÉER DES MOMENTS INOUBLIABLES</p>
 <p class="lead">De la première inspiration à la réalisation, LAM imagine des événements sur mesure qui reflètent votre style, respectent vos priorités et réunissent vos invités autour d’un moment unique.</p>
 <div class="actions"><a class="btn primary" href="#formulaire">Planifier mon événement</a><a class="btn" href="#services">Découvrir nos services</a></div>
 </div>
-
 </div></section>
 
 <section id="apropos" class="section">
